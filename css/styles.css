@@ -1,0 +1,216 @@
+/* ============= 1) Reset + variables básicas ============= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: hsl(190, 50%, 35%);
+    --color-primario-hover: hsl(190, 50%, 30%);
+    --color-fondo: #fafafa;
+    --color-texto: #222;
+    --color-card: #fff;
+    --borde: #e5e7eb;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ============= 2) Utilidades de layout ============= */
+.container {
+    width: min(92vw, 960px);
+    margin-inline: auto;
+    padding: 16px;
+}
+
+.seccion {
+    margin-block: 28px;
+}
+
+/* ============= 3) Encabezado y navegación ============= */
+.encabezado {
+    background: #fff;
+    border-bottom: 1px solid var(--borde);
+}
+
+.encabezado .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+}
+
+.menu>li>a {
+    text-decoration: none;
+    color: var(--color-texto);
+    padding: 8px 10px;
+    /* box model: padding */
+    border-radius: 8px;
+    border: 1px solid transparent;
+    /* box model: border */
+}
+
+.menu>li>a:hover {
+    border-color: var(--borde);
+    /* pseudoclase :hover */
+}
+
+/* ============= 4) Portada ============= */
+.portada {
+    background: var(--color-card);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 20px;
+    /* box model: padding */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 8px;
+    /* box model: margin */
+    padding: 10px 16px;
+    background: var(--color-primario);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: var(--color-primario-hover);
+}
+
+/* ============= 5) Cards de servicios (Grid + selectores avanzados) ============= */
+.grid-cards {
+    display: grid;
+    /* permitido por la guía */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    background: var(--color-card);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Alternamos estilos con nth-child() */
+.card:nth-child(odd) {
+    background: #f3f9fb;
+}
+
+.card:nth-child(even) {
+    background: #f7fbf3;
+}
+
+/* Uso de ID para un estilo único (no abusar de IDs para estilos) */
+#destacado {
+    border: 2px solid var(--color-primario);
+}
+
+/* ============= 6) Lista de planes ============= */
+.lista-planes {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-planes>li {
+    background: var(--color-card);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+/* Primer elemento resaltado con :first-child */
+.lista-planes>li:first-child {
+    outline: 2px dashed var(--color-primario);
+    outline-offset: 2px;
+}
+
+/* Tercer elemento destacado con nth-child */
+.lista-planes>li:nth-child(3) h3 {
+    color: var(--color-primario);
+}
+
+/* ============= 7) Formulario (atributos + focus) ============= */
+.form-contacto {
+    background: var(--color-card);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.campo {
+    margin-bottom: 12px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-contacto input,
+.form-contacto textarea,
+.form-contacto select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    font: inherit;
+}
+
+/* Selector de atributo: solo el email recibe un estilo extra */
+.form-contacto input[type="email"] {
+    border-color: #c7d2fe;
+}
+
+/* Estados de foco accesibles */
+.form-contacto input:focus,
+.form-contacto textarea:focus,
+.form-contacto select:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+/* ============= 8) Pie de página ============= */
+.pie {
+    margin-top: 28px;
+    border-top: 1px solid var(--borde);
+    background: #fff;
+}
+
+.pie .container {
+    padding-block: 16px;
+}

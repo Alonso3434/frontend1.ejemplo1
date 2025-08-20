@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veterinaria Patitas Felices</title>
+    <!-- Renombra el archivo CSS con TU nombre tal como indica la pauta -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="container">
+            <a class="logo" href="/">Patitas Felices</a>
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="portada">
+            <h1>Atención integral para tu mascota</h1>
+            <p>Citas, urgencias y controles con profesionales que aman a los animales.</p>
+            <a class="btn" href="#contacto">Reservar hora</a>
+        </section>
+
+        <section id="servicios" class="seccion">
+            <h2>Servicios</h2>
+
+            <div class="grid-cards">
+                <article class="card">
+                    <h3>Consulta General</h3>
+                    <p>Evaluación clínica completa y plan de cuidados.</p>
+                </article>
+
+                <article class="card" id="destacado">
+                    <h3>Vacunación</h3>
+                    <p>Calendarios al día para perros y gatos, según edad y peso.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Odontología</h3>
+                    <p>Limpieza dental y prevención de enfermedades bucales.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Peluquería</h3>
+                    <p>Baño, corte y cuidados estéticos sin estrés.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="planes" class="seccion">
+            <h2>Planes de salud</h2>
+            <ul class="lista-planes">
+                <li>
+                    <h3>Plan Cachorro</h3>
+                    <p>Controles + vacunación inicial.</p>
+                </li>
+                <li>
+                    <h3>Plan Adulto</h3>
+                    <p>Chequeos semestrales y desparasitación.</p>
+                </li>
+                <li>
+                    <h3>Plan Senior</h3>
+                    <p>Seguimiento geriátrico y exámenes preventivos.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <h2>Reserva tu hora</h2>
+            <form class="form-contacto" action="#" method="post">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo de mascota</label>
+                    <select id="tipo" name="tipo">
+                        <option>Perro</option>
+                        <option>Gato</option>
+                        <option>Otra</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+                </div>
+
+                <button class="btn" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="container">
+            <small>&copy; 2025 Patitas Felices — Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>
